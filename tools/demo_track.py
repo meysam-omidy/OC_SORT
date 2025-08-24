@@ -139,7 +139,7 @@ def image_demo(predictor, vis_folder, current_time, args):
             break
 
     if args.save_result:
-        res_file = osp.join(vis_folder, f"{timestamp}.txt")
+        res_file = osp.join(vis_folder, f"{args.path.split('/')[-2]}.txt")
         with open(res_file, 'w') as f:
             f.writelines(results)
         logger.info(f"save results to {res_file}")
